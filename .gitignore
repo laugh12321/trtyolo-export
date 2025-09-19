@@ -1,0 +1,12 @@
+# Build and compilation directories
+build/
+dist/
+*.egg-info/
+
+# IDE and editor-specific files
+.vscode/
+
+# Python cache and virtual environment
+__pycache__/
+.cache/
+venv/
