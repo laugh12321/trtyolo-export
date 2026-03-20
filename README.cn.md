@@ -14,7 +14,7 @@
 
 ---
 
-🔧 `trtyolo-export` 是 TensorRT-YOLO 项目的官方 ONNX 转换工具，提供简单易用的命令行界面，帮助您将已经导出的 YOLO 系列 ONNX 模型转换为兼容 TensorRT-YOLO 推理的输出结构。转换后的 ONNX 文件已预先注册所需 TensorRT 插件（包括官方插件和自定义插件，支持检测、分割、姿态估计、OBB 等任务），大幅提升模型部署效率。
+🔧 `trtyolo-export` 是 [TensorRT-YOLO](https://github.com/laugh12321/TensorRT-YOLO) 项目的官方 ONNX 转换工具，提供简单易用的命令行界面，帮助您将已经导出的 YOLO 系列 ONNX 模型转换为兼容 TensorRT-YOLO 推理的输出结构。转换后的 ONNX 文件已预先注册所需 TensorRT 插件（包括官方插件和自定义插件，支持检测、分割、姿态估计、OBB 等任务），大幅提升模型部署效率。
 
 ## ✨ 主要特性
 
