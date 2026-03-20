@@ -14,7 +14,7 @@
 
 ---
 
-🔧 `trtyolo-export` is the official ONNX conversion tool for the TensorRT-YOLO project, providing a simple and user-friendly command-line interface to help you convert already-exported YOLO-family ONNX models into TensorRT-YOLO compatible outputs. The converted ONNX files have pre-registered the required TensorRT plugins (including official and custom plugins, supporting detection, segmentation, pose estimation, OBB, etc.), significantly improving model deployment efficiency.
+🔧 `trtyolo-export` is the official ONNX conversion tool for the [TensorRT-YOLO](https://github.com/laugh12321/TensorRT-YOLO) project, providing a simple and user-friendly command-line interface to help you convert already-exported YOLO-family ONNX models into TensorRT-YOLO compatible outputs. The converted ONNX files have pre-registered the required TensorRT plugins (including official and custom plugins, supporting detection, segmentation, pose estimation, OBB, etc.), significantly improving model deployment efficiency.
 
 ## ✨ Key Features
 

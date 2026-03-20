@@ -1,6 +1,14 @@
 name: Publish Python 🐍 distribution 📦 to PyPI and TestPyPI
 
-on: push
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "v*"
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
@@ -32,7 +40,7 @@ jobs:
   publish-to-pypi:
     name: >-
       Publish Python 🐍 distribution 📦 to PyPI
-    if: startsWith(github.ref, 'refs/tags/')  # only publish to PyPI on tag pushes
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
     needs:
     - build
     runs-on: ubuntu-latest
@@ -53,6 +61,7 @@ jobs:
 
   publish-to-testpypi:
     name: Publish Python 🐍 distribution 📦 to TestPyPI
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs:
     - build
     runs-on: ubuntu-latest
@@ -74,3 +83,4 @@ jobs:
       uses: pypa/gh-action-pypi-publish@v1.13.0
       with:
         repository-url: https://test.pypi.org/legacy/
+        skip-existing: true
