@@ -238,6 +238,10 @@ def rewrite_onnx(
                     plugin_op=result.plugin_op,
                 )
 
+            for node in graph.nodes:
+                if node.op.endswith("_TRT"):
+                    node.domain = "TRT"
+
             save_onnx_graph(
                 graph,
                 output_path,
