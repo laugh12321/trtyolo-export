@@ -61,6 +61,11 @@ def make_const_int64(name: str, values: Sequence[int]) -> gs.Constant:
     return gs.Constant(name=name, values=np.array(values, dtype=np.int64))
 
 
+def make_const_int64_scalar(name: str, value: int) -> gs.Constant:
+    """Create a 0-D int64 constant required by ops such as Range."""
+    return gs.Constant(name=name, values=np.array(value, dtype=np.int64))
+
+
 def make_const_float32(name: str, value: float) -> gs.Constant:
     """Create a float32 scalar constant tensor."""
     return gs.Constant(name=name, values=np.array([value], dtype=np.float32))

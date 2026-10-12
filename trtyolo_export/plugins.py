@@ -24,7 +24,7 @@ import numpy as np
 import onnx_graphsurgeon as gs
 from onnx import TensorProto
 
-from .utils import get_static_dim, make_const_int64
+from .utils import get_static_dim, make_const_int64, make_const_int64_scalar
 
 
 def append_trt_nms_plugin(
@@ -229,9 +229,9 @@ def append_trt_nms_plugin(
             op="Range",
             name="RangeDetBatch",
             inputs=[
-                make_const_int64("det_batch_range_start", [0]),
+                make_const_int64_scalar("det_batch_range_start", 0),
                 batch_dim_scalar,
-                make_const_int64("det_batch_range_step", [1]),
+                make_const_int64_scalar("det_batch_range_step", 1),
             ],
             outputs=[batch_range],
         )
